@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Get in touch with Majaliwa Yahaya — tell us about your project and let's build a modern, responsive website together.">
+
+    <title>Contact | Majaliwa Yahaya</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    M
+                </div>
+
+                <div class="logo-text">
+                    <span> <strong>Majaliwa Yahaya</strong></span>
+                    <small>Build • Grow • Succeed</small>
+                </div>
+
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+    <i class="fa-solid fa-house"></i>
+    <span data-en="Home" data-sw="Nyumbani">
+                        Home
+                    </span>
+</a>
+
+<a href="about.html" class="nav-link">
+    <i class="fa-solid fa-user"></i>
+    <span data-en="About" data-sw="Kuhusu">
+                        About
+                    </span>
+</a>
+
+<a href="index.html#services" class="nav-link">
+    <i class="fa-solid fa-gear"></i>
+     <span data-en="Services" data-sw="Huduma">
+                        Services
+                    </span>
+</a>
+
+<a href="contact.html" class="nav-contact active">
+    <i class="fa-regular fa-envelope"></i>
+    <span data-en="Contact" data-sw="Wasiliana">
+                        Contact
+                    </span>
+</a>
+
+            </nav>
+
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+
+                <button id="languageBtn" class="language-btn">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="languageText">EN</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="language-menu" id="languageMenu">
+
+                    <button onclick="changeLanguage('en')">
+                        🇬🇧 English
+                    </button>
+
+                    <button onclick="changeLanguage('sw')">
+                        🇹🇿 Kiswahili
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact">
+
+        <!-- Heading -->
+        <div class="contact-heading">
+
+            <div class="badge">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <span
+                    data-en="Get In Touch"
+                    data-sw="Wasiliana Nasi">
+                    Get In Touch
+                </span>
+
+            </div>
+
+
+            <h1>
+
+                <span
+                    data-en="Contact"
+                    data-sw="Wasiliana">
+                    Contact
+                </span>
+
+                <span
+                    data-en="Us"
+                    data-sw="Nasi">
+                    Us
+                </span>
+
+            </h1>
+
+
+            <p
+                data-en="Have a project in mind? We'd love to hear from you. Let's work together and turn your ideas into reality."
+                data-sw="Una mradi unaoufikiria? Tungependa kusikia kutoka kwako. Tufanye kazi pamoja na kubadilisha mawazo yako kuwa uhalisia.">
+
+                Have a project in mind? We'd love to hear from you.
+                Let's work together and turn your ideas into reality.
+
+            </p>
+
+
+            <div class="divider">
+
+                <span></span>
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <!-- ================= PHONE CONTACT ================= -->
+
+<div class="phone-contact">
+
+    <div class="phone-icon">
+        <i class="fa-solid fa-phone"></i>
+    </div>
+
+    <div class="phone-info">
+
+        <span
+            data-en="Call Us"
+            data-sw="Tupigie Simu">
+            Call Us
+        </span>
+
+        <a href="tel:+255745652466">
+            +255 745 652 466
+        </a>
+
+        <small
+            data-en="Available Monday - Saturday"
+            data-sw="Tunapatikana Jumatatu - Jumamosi">
+            Available Monday - Saturday
+        </small>
+
+    </div>
+
+</div>
+
+
+        <!-- ================= CONTACT FORM ================= -->
+
+        <form class="contact-card"
+              action="https://formspree.io/f/xqpaparp"
+              method="POST">
+
+    <!-- Name -->
+    <div class="input-box">
+
+        <div class="input-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <input
+            type="text"
+            id="nameInput"
+            name="name"
+            placeholder="Your Name"
+            data-placeholder-en="Your Name"
+            data-placeholder-sw="Jina Lako"
+            required>
+
+    </div>
+
+
+    <!-- Email -->
+    <div class="input-box">
+
+        <div class="input-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="Your Email"
+            data-placeholder-en="Your Email"
+            data-placeholder-sw="Barua Pepe Yako"
+            required>
+
+    </div>
+
+
+    <!-- Message -->
+    <div class="input-box message-box">
+
+        <div class="input-icon">
+            <i class="fa-solid fa-comment"></i>
+        </div>
+
+        <textarea
+            id="messageInput"
+            name="message"
+            placeholder="Write message here..."
+            data-placeholder-en="Write message here..."
+            data-placeholder-sw="Andika ujumbe hapa..."
+            required></textarea>
+
+    </div>
+
+
+    <!-- Button -->
+    <button type="submit" class="send-btn">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+        <span
+            data-en="Send Message"
+            data-sw="Tuma Ujumbe">
+            Send Message
+        </span>
+
+        <i class="fa-solid fa-arrow-right arrow"></i>
+
+    </button>
+
+            </form>
+
+    </section>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* ================= LANGUAGE SWITCHER ================= */
+
+        const languageBtn = document.getElementById("languageBtn");
+        const languageMenu = document.getElementById("languageMenu");
+        const languageText = document.getElementById("languageText");
+
+
+        /* Open / Close Language Menu */
+
+        languageBtn.addEventListener("click", () => {
+
+            languageMenu.classList.toggle("show");
+
+        });
+
+
+        /* Change Language */
+
+        function changeLanguage(language) {
+
+            const elements = document.querySelectorAll("[data-en]");
+
+            elements.forEach(element => {
+
+                if (language === "sw") {
+
+                    element.textContent = element.getAttribute("data-sw");
+
+                } else {
+
+                    element.textContent = element.getAttribute("data-en");
+
+                }
+
+            });
+
+
+            /* Change Placeholders */
+
+            const inputs = document.querySelectorAll(
+                "[data-placeholder-en]"
+            );
+
+            inputs.forEach(input => {
+
+                if (language === "sw") {
+
+                    input.placeholder =
+                        input.getAttribute("data-placeholder-sw");
+
+                } else {
+
+                    input.placeholder =
+                        input.getAttribute("data-placeholder-en");
+
+                }
+
+            });
+
+
+            /* Change Button Text */
+
+            languageText.textContent =
+                language === "sw" ? "SW" : "EN";
+
+
+            /* Change HTML Language */
+
+            document.documentElement.lang =
+                language === "sw" ? "sw" : "en";
+
+
+            /* Close Language Menu */
+
+            languageMenu.classList.remove("show");
+
+
+            /* Save Language */
+
+            localStorage.setItem("selectedLanguage", language);
+
+        }
+
+
+        /* Load Saved Language */
+
+        const savedLanguage =
+            localStorage.getItem("selectedLanguage") || "en";
+
+        changeLanguage(savedLanguage);
+
+
+        /* ================= MOBILE MENU ================= */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+
+        menuToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("show");
+
+            const icon =
+                menuToggle.querySelector("i");
+
+
+            if (navMenu.classList.contains("show")) {
+
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+        /* Close Mobile Menu */
+
+        document.querySelectorAll(
+            ".nav-link, .nav-contact"
+        ).forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navMenu.classList.remove("show");
+
+                const icon =
+                    menuToggle.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            });
+
+        });
+
+
+        /* Close Language Menu When Clicking Outside */
+
+        document.addEventListener("click", (event) => {
+
+            if (
+                !event.target.closest(".language-switcher")
+            ) {
+
+                languageMenu.classList.remove("show");
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+</html>
