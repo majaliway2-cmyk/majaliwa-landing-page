@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Majaliwa Yahaya creates modern, responsive and affordable websites for businesses and individuals.">
+
+    <meta name="keywords" content="web design Tanzania, website design, responsive websites, web developer Tanzania">
+
+    <meta name="author" content="Majaliwa Yahaya">
+
+    <title>Majaliwa Web Design | Modern Websites for Businesses</title>
+
+    <meta property="og:title" content="Majaliwa Yahaya | Web Designer">
+    <meta property="og:description"
+        content="Modern, responsive and affordable websites for businesses and individuals.">
+    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:url" content="https://YOUR-DOMAIN.com">
+    <meta property="og:type" content="website">
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    M
+                </div>
+
+                <div class="logo-text">
+                    <span> <strong>Majaliwa Yahaya</strong></span>
+                    <small>Build • Grow • Succeed</small>
+                </div>
+
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span data-en="Home" data-sw="Nyumbani">
+                        Home
+                    </span>
+
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span data-en="About" data-sw="Kuhusu">
+                        About
+                    </span>
+                </a>
+
+                <a href="index.html#services" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span data-en="Services" data-sw="Huduma">
+                        Services
+                    </span>
+                </a>
+
+                <a href="contact.html" class="nav-contact">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span data-en="Contact" data-sw="Wasiliana">
+                        Contact
+                    </span>
+                </a>
+
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+
+                    <button class="language-btn active" data-lang="en">
+                        🇬🇧 EN
+                    </button>
+
+                    <button class="language-btn" data-lang="sw">
+                        🇹🇿 SW
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- =========================
+         MOBILE MENU SCRIPT
+    ========================== -->
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("show");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (navMenu.classList.contains("show")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+
+        });
+
+
+        // Close menu after clicking a link
+        document.querySelectorAll(".nav-link, .nav-contact").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navMenu.classList.remove("show");
+
+                const icon = menuToggle.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            });
+
+        });
+
+
+        // Active navigation
+        document.querySelectorAll(".nav-link").forEach(link => {
+
+            link.addEventListener("click", function () {
+
+                document.querySelectorAll(".nav-link").forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                this.classList.add("active");
+
+            });
+
+        });
+
+    </script>
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <section class="hero" id="home">
+
+        <!-- Background Effects -->
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="hero-grid"></div>
+
+
+        <div class="hero-container">
+
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+            <div class="hero-content">
+
+                <!-- Badge -->
+                <div class="hero-badge">
+
+                    <span class="badge-icon">
+                        ⚡
+                    </span>
+
+                    <span data-en="Modern Digital Solutions" data-sw="Suluhisho za Kisasa za Kidijitali">
+                        Modern Digital Solutions
+                    </span>
+
+                    <span class="badge-line"></span>
+
+                </div>
+
+
+                <!-- Heading -->
+                <h1>
+                    <span data-en="Grow Your" data-sw="Kuza">Grow Your</span>
+                    <span data-en="Business With Us" data-sw="Biashara Yako Pamoja Nasi">
+                        Business With Us
+                    </span>
+                </h1>
+
+
+                <!-- Description -->
+                <p class="hero-description"
+                    data-en="We help businesses build strong online presence with modern and responsive websites, creative designs and smart digital solutions."
+                    data-sw="Tunasaidia biashara kujenga uwepo imara mtandaoni kupitia tovuti za kisasa na zinazoweza kuonekana vizuri kwenye vifaa mbalimbali, ubunifu wa kuvutia na suluhisho bora za kidijitali.">
+
+                    We help businesses build strong online presence with
+                    modern and responsive websites, creative designs and
+                    smart digital solutions.
+
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="hero-actions">
+
+                    <a href="about.html" class="btn btn-primary">
+
+                        <span data-en="Get Started" data-sw="Anza Sasa">
+                            Get Started
+                        </span>
+
+                        <strong>→</strong>
+
+                    </a>
+
+
+                    <a href="#services" class="watch-work">
+
+                        <span class="play-btn">
+                            ▶
+                        </span>
+
+                        <span class="watch-text">
+
+                            <strong data-en="Explore Our Services" data-sw="Chunguza huduma zetu">
+                                Explore Our Services
+                            </strong>
+
+                            <small data-en="See what we can build for you"
+                                data-sw="Ona kile tunachoweza kukutengenezea">
+                                See what we can build for you
+                            </small>
+
+                        </span>
+
+                    </a>
+                </div>
+
+
+                <!-- =========================
+                     STATISTICS
+                ========================== -->
+                <!-- =========================
+     STATISTICS
+========================== -->
+
+                <div class="hero-stats">
+
+                    <!-- Stat 1 -->
+                    <div class="stat">
+
+                        <div class="stat-icon">
+                            ♙
+                        </div>
+
+                        <div>
+                            <strong>Web Creator</strong>
+
+                            <span data-en="Web Creator" data-sw="Mbunifu wa tovuti">
+                                Web Creator
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stat 2 -->
+                    <div class="stat">
+
+                        <div class="stat-icon">
+                            🚀
+                        </div>
+
+                        <div>
+                            <strong>Affordable</strong>
+
+                            <span data-en="Quality Websites, Fair Prices" data-sw="Tovuti Bora kwa Bei Nafuu">
+                                Quality Websites, Fair Prices
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stat 3 -->
+                    <div class="stat">
+
+                        <div class="stat-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Quality</strong>
+
+                            <span data-en="Focused on great results" data-sw="Tunalenga kutoa matokeo bora">
+                                Focused on great results
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 RIGHT SIDE
+            ========================== -->
+                <div class="hero-visual">
+
+                    <!-- Decorative Orbit -->
+                    <div class="image-orbit orbit-one"></div>
+                    <div class="image-orbit orbit-two"></div>
+
+
+                    <!-- Main Image -->
+                    <div class="hero-image-card">
+
+                        <img src="images/hero image.png" alt="Modern digital workspace">
+
+
+                        <!-- Image Overlay -->
+                        <div class="image-overlay"></div>
+
+
+                        <!-- =========================
+                         FLOATING CARD 1
+                    ========================== -->
+                        <div class="floating-card website-card">
+
+                            <div class="floating-icon">
+                                ◎
+                            </div>
+
+                            <div>
+
+                                <strong data-en="Modern Websites" data-sw="Tovuti za Kisasa">
+                                    Modern Websites
+                                </strong>
+
+                                <span data-en="Fast • Secure • Responsive" data-sw="Haraka • Salama • Zinazobadilika">
+                                    Fast • Secure • Responsive
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                         FLOATING CARD 2
+                    ========================== -->
+                        <div class="floating-card solution-card">
+
+                            <div class="floating-icon">
+                                &lt;/&gt;
+                            </div>
+
+                            <div>
+
+                                <strong data-en="Creative Solutions" data-sw="Suluhisho Bunifu">
+                                    Creative Solutions
+                                </strong>
+
+                                <span data-en="Design • Develop • Grow" data-sw="Buni • Tengeneza • Kuza">
+                                    Design • Develop • Grow
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Glow -->
+            <div class="hero-bottom-glow"></div>
+
+    </section>
+
+
+    <!-- =========================
+     SERVICES SECTION
+========================== -->
+    <section class="services" id="services">
+
+        <!-- Background shapes -->
+        <div class="shape shape-one"></div>
+        <div class="shape shape-two"></div>
+
+        <div class="services-container">
+
+            <!-- =========================
+             SERVICES HEADING
+        ========================== -->
+            <div class="services-heading">
+
+                <div class="heading-label">
+
+                    <span></span>
+
+                    <p data-en="OUR SERVICES" data-sw="HUDUMA ZETU">
+                        OUR SERVICES
+                    </p>
+
+                    <span></span>
+
+                </div>
+
+
+                <h1>
+
+                    <span data-en="We Provide" data-sw="Tunatoa">
+                        We Provide
+                    </span>
+
+                    <span data-en="Quality" data-sw="Huduma Bora">
+                        Quality
+                    </span>
+
+                    <span data-en="Digital Solutions" data-sw="Suluhisho za Kidijitali">
+                        Digital Solutions
+                    </span>
+
+                </h1>
+
+
+                <p class="heading-text"
+                    data-en="We help businesses grow with modern, fast and responsive websites that make a real difference."
+                    data-sw="Tunasaidia biashara kukua kupitia tovuti za kisasa, zenye kasi na zinazobadilika kulingana na kifaa, ambazo huleta matokeo halisi.">
+
+                    We help businesses grow with modern, fast and responsive
+                    websites that make a real difference.
+
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+             SERVICES CARDS
+        ========================== -->
+            <div class="services-grid">
+
+
+                <!-- =========================
+                 SERVICE CARD 1
+            ========================== -->
+                <div class="service-card">
+
+                    <div class="card-top">
+
+                        <div class="service-icon purple-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <div>
+
+                            <h2 data-en="Web Design" data-sw="Ubunifu wa Tovuti">
+                                Web Design
+                            </h2>
+
+                            <div class="small-line"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="service-description"
+                        data-en="We create modern and attractive websites for businesses and individuals."
+                        data-sw="Tunatengeneza tovuti za kisasa na zenye kuvutia kwa biashara na watu binafsi.">
+
+                        We create modern and attractive websites for
+                        businesses and individuals.
+
+                    </p>
+
+
+                    <div class="service-image">
+
+                        <img src="images/card1.png" alt="Web Design">
+
+                    </div>
+
+
+                    <a href="contact.html" class="learn-btn">
+
+                        <span data-en="Learn More" data-sw="Jifunze Zaidi">
+                            Learn More
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================
+                 SERVICE CARD 2
+            ========================== -->
+                <div class="service-card popular-card">
+
+                    <!-- Popular Badge -->
+                    <div class="popular-badge">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span data-en="Most Popular" data-sw="Inayopendwa Zaidi">
+                            Most Popular
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-top">
+
+                        <div class="service-icon purple-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+
+                        <div>
+
+                            <h2 data-en="Responsive Design" data-sw="Ubunifu Unaobadilika">
+                                Responsive Design
+                            </h2>
+
+                            <div class="small-line"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="service-description"
+                        data-en="Your website will look great on phones, tablets and computers."
+                        data-sw="Tovuti yako itaonekana vizuri kwenye simu, tablet na kompyuta.">
+
+                        Your website will look great on phones,
+                        tablets and computers.
+
+                    </p>
+
+
+                    <div class="service-image">
+
+                        <img src="images/card2.png" alt="Responsive Design">
+
+                    </div>
+
+
+                    <a href="contact.html" class="learn-btn">
+
+                        <span data-en="Learn More" data-sw="Jifunze Zaidi">
+                            Learn More
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================
+                 SERVICE CARD 3
+            ========================== -->
+                <div class="service-card">
+
+                    <div class="card-top">
+
+                        <div class="service-icon green-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div>
+
+                            <h2 data-en="Website Development" data-sw="Utengenezaji wa Tovuti">
+                                Website Development
+                            </h2>
+
+                            <div class="small-line green-line"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="service-description"
+                        data-en="We build fast and user-friendly websites using modern web technologies."
+                        data-sw="Tunatengeneza tovuti zenye kasi na rahisi kutumia kwa kutumia teknolojia za kisasa za wavuti.">
+
+                        We build fast and user-friendly websites using
+                        modern web technologies.
+
+                    </p>
+
+
+                    <div class="service-image">
+
+                        <img src="images/card3.png" alt="Website Development">
+
+                    </div>
+
+
+                    <a href="contact.html" class="learn-btn">
+
+                        <span data-en="Learn More" data-sw="Jifunze Zaidi">
+                            Learn More
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+             SERVICES CTA
+        ========================== -->
+            <div class="services-cta">
+
+                <span></span>
+
+                <a href="about.html" class="cta-btn">
+
+                    <span data-en="Learn More About Us" data-sw="Jifunze Zaidi Kuhusu Sisi">
+                        Learn More About Us
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <!-- Decorative background -->
+        <div class="footer-glow footer-glow-left"></div>
+        <div class="footer-glow footer-glow-right"></div>
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-column footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">M</span>
+                    <span class="logo-text">
+                        <span>Majaliwa Yahaya</span>
+                    </span>
+                </a>
+
+                <p class="footer-description" data-en="Building modern websites for modern businesses."
+                    data-sw="Tunatengeneza tovuti za kisasa kwa biashara za kisasa.">
+
+                    Building modern websites for modern businesses.
+
+                </p>
+
+                <!-- Social Media -->
+                <div class="social-links">
+
+                    <a href="https://facebook.com/majaliwayahya" class="social facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.github.com/majaliwayahya" class="social github" aria-label="GitHub"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com" class="social linkedin" aria-label="LinkedIn" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com" class="social youtube" aria-label="YouTube" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-column quick-links">
+
+                <h3>
+
+                    <span class="heading-icon">
+                        <i class="fas fa-link"></i>
+                    </span>
+
+                    <span data-en="Quick Links" data-sw="Viungo Muhimu">
+                        Quick Links
+                    </span>
+
+                </h3>
+
+                <ul>
+                    <li>
+                        <a href="index.html">
+
+                            <span data-en="Home" data-sw="Nyumbani">
+                                Home
+                            </span>
+
+                            <i class="fas fa-chevron-right"></i>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+
+                            <span data-en="About" data-sw="Kuhusu">
+                                About
+                            </span>
+
+                            <i class="fas fa-chevron-right"></i>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+
+                            <span data-en="Services" data-sw="Huduma">
+                                Services
+                            </span>
+
+                            <i class="fas fa-chevron-right"></i>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+
+                            <span data-en="Contact" data-sw="Wasiliana">
+                                Contact
+                            </span>
+
+                            <i class="fas fa-chevron-right"></i>
+
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column connect">
+
+                <h3>
+
+                    <span class="heading-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </span>
+
+                    <span data-en="Let's Connect" data-sw="Wasiliana Nasi">
+                        Let's Connect
+                    </span>
+
+                </h3>
+
+                <p data-en="Have a project in mind? We'd love to hear from you. Reach out and let's build something great together."
+                    data-sw="Una mradi akilini? Tungependa kusikia kutoka kwako. Wasiliana nasi na tujenge kitu kizuri pamoja.">
+
+                    Have a project in mind? We'd love to hear from you.
+                    Reach out and let's build something great together.
+
+                </p>
+
+                <a href="contact.html" class="contact-btn">
+
+                    <i class="far fa-envelope"></i>
+
+                    <span data-en="Contact Us" data-sw="Wasiliana Nasi">
+                        Contact Us
+                    </span>
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+
+            <div class="bottom-line"></div>
+
+            <p>
+                © 2026
+                <span>Majaliwa Yahaya</span>
+                All Rights Reserved.
+            </p>
+
+            <div class="bottom-line"></div>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const languageButtons =
+                document.querySelectorAll(".language-btn");
+
+            const translatableElements =
+                document.querySelectorAll("[data-en][data-sw]");
+
+
+
+            function changeLanguage(language) {
+
+                // Change all text
+                translatableElements.forEach(element => {
+
+                    element.textContent =
+                        element.getAttribute(`data-${language}`);
+
+                });
+
+
+
+                // Change HTML language
+                document.documentElement.lang = language;
+
+
+
+                // Update active button
+                languageButtons.forEach(button => {
+
+                    button.classList.remove("active");
+
+                    if (button.dataset.lang === language) {
+                        button.classList.add("active");
+                    }
+
+                });
+
+
+
+                // Save selected language
+                localStorage.setItem("selectedLanguage", language);
+
+            }
+
+
+
+            // Language buttons
+            languageButtons.forEach(button => {
+
+                button.addEventListener("click", function () {
+
+                    const language = this.dataset.lang;
+
+                    changeLanguage(language);
+
+                });
+
+            });
+
+
+
+            // Load saved language
+            const savedLanguage =
+                localStorage.getItem("selectedLanguage") || "en";
+
+            changeLanguage(savedLanguage);
+
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const pageLinks = document.querySelectorAll(
+                'a[href]:not([href^="#"]):not([href*="#"])'
+            );
+
+            pageLinks.forEach(link => {
+
+                link.addEventListener("click", function (e) {
+
+                    const href = this.getAttribute("href");
+
+                    // Ignore empty links
+                    if (!href || href === "#") {
+                        return;
+                    }
+
+                    // Ignore same-page links
+                    if (href.startsWith("#")) {
+                        return;
+                    }
+
+                    // Ignore JavaScript links
+                    if (href.startsWith("javascript:")) {
+                        return;
+                    }
+
+                    e.preventDefault();
+
+                    document.body.classList.add("page-exit");
+
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400);
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
